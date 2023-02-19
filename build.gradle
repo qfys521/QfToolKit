@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version "7.1.2"
 }
 
 group 'cn.qfys521.QfToolKit'
@@ -7,13 +8,24 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    google()
+    jcenter()
+    mavenLocal()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.33'
+    compileOnly fileTree(dir:'libs',include:['*.jar'])
 }
 
-test {
-    useJUnitPlatform()
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+shadowJar {
+    minimize()
+    exclude "META-INF/*.SF"
+    exclude "META-INF/*.DSA"
+    exclude "META-INF/*.RSA"
+    exclude "META-INF/LICENSE"
+    archiveName project.name + '-' + getArchiveVersion().get() + '-AllDependencies' + '.' + getArchiveExtension().get()
 }

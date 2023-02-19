@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.minecraft.algorithm;
+package cn.qfys521.QfToolKit.minecraft.algorithm;
 
 import java.util.*;
 import java.util.Map.Entry;

@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.jrrpUtil;
+package cn.qfys521.QfToolKit.jrrpUtil;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.DataUtil;
+package cn.qfys521.QfToolKit.DataUtil;
 
 import org.yaml.snakeyaml.Yaml;
 

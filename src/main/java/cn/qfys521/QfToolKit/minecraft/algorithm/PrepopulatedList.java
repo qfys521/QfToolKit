@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.minecraft.algorithm;
+package cn.qfys521.QfToolKit.minecraft.algorithm;
 
 import java.lang.reflect.Field;
 

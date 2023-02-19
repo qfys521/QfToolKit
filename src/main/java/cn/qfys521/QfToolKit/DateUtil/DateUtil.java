@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.DateUtil;
+package cn.qfys521.QfToolKit.DateUtil;
 
 import java.util.Calendar;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.encryption;
+package cn.qfys521.QfToolKit.encryption;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

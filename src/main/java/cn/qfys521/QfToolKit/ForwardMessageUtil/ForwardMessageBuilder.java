@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.ForwardMessageUtil;
+package cn.qfys521.QfToolKit.ForwardMessageUtil;
 
 import cn.chuanwise.xiaoming.util.MiraiCodes;
 import net.mamoe.mirai.message.code.MiraiCode;

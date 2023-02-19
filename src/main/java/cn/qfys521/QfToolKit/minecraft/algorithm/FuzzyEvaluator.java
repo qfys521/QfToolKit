@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.minecraft.algorithm;
+package cn.qfys521.QfToolKit.minecraft.algorithm;
 
 /**
  * @author qfys521

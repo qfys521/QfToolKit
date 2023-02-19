@@ -1,4 +1,4 @@
-package cn.qfys521.Utils.HttpUtil;
+package cn.qfys521.QfToolKit.HttpUtil;
 
 
 import javax.net.ssl.HostnameVerifier;
@@ -9,7 +9,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
-import static cn.qfys521.Utils.HttpUtil.SslUtils.trustAllHttpsCertificates;
+import static cn.qfys521.QfToolKit.HttpUtil.SslUtils.trustAllHttpsCertificates;
+
 
 /**
  * @author qfys521
