@@ -29,12 +29,6 @@ public class HttpUtils {
      */
     public String getUrlData(String url) throws Exception {
         trustAllHttpsCertificates();
-        HostnameVerifier hv = new HostnameVerifier() {
-            public boolean verify(String urlHostName, SSLSession session) {
-                System.out.println("Warning: URL Host: " + urlHostName + " vs. " + session.getPeerHost());
-                return true;
-            }
-        };
         URL Url = new URL(url);
         URLConnection conn = Url.openConnection();
 
