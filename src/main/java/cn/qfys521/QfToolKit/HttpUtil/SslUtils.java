@@ -11,7 +11,7 @@ import java.security.cert.X509Certificate;
  */
 public class SslUtils {
 
-    static void trustAllHttpsCertificates() throws Exception {
+    public static void trustAllHttpsCertificates() throws Exception {
         TrustManager[] trustAllCerts = new TrustManager[1];
         TrustManager tm = new miTM();
         trustAllCerts[0] = tm;
