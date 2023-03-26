@@ -1,11 +1,8 @@
 package cn.qfys521.QfToolKit.HttpUtil;
 
 
-
 import okhttp3.*;
 
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLSession;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;

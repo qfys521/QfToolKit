@@ -1,5 +1,6 @@
 package cn.qfys521.QfToolKit.DataUtil;
 
+
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
@@ -34,16 +35,26 @@ public class yamlUtil {
     }
 
     public void write(Map<Object, Object> map) throws IOException {
-        Yaml yml = new Yaml();
-        FileWriter writer = new FileWriter(this.path, false);
-        BufferedWriter buffer = new BufferedWriter(writer);
-        buffer.newLine();
-        yml.dump(map, buffer);
-        buffer.close();
-        writer.close();
+        if(new File(path).length()!=0){
+            Map<Object, Object> m = this.read();
+            m.putAll(map);
+            w(this.path,m);
+        }else {
+            w(this.path,map);
+        }
+
     }
 
     public void write(String path, Map<Object, Object> map) throws IOException {
+        if(new File(path).length()!=0){
+            Map<Object, Object> m = this.read();
+            m.putAll(map);
+            w(path,m);
+        }else {
+            w(path,map);
+        }
+    }
+    private void w(String path,Map<Object,Object> map) throws IOException {
         Yaml yml = new Yaml();
         FileWriter writer = new FileWriter(path, false);
         BufferedWriter buffer = new BufferedWriter(writer);
@@ -52,6 +63,5 @@ public class yamlUtil {
         buffer.close();
         writer.close();
     }
-
 
 }
